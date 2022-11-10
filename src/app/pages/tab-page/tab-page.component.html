@@ -1,0 +1,41 @@
+<div class="card text-center mx-auto mt-5" style="max-width: 720px;">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs justify-content-evenly">
+      <li class="nav-item">
+        <a class="nav-link"
+          (click)="goToTab('income', 'income')"
+          [class.active]="'income' == activeItem"
+        >Income</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+          (click)="goToTab('outcome', 'outcome')"
+          [class.active]="'outcome' == activeItem"
+        >Outcome</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+          (click)="goToTab('loan', 'loan')"
+          [class.active]="'loan' == activeItem"
+        >Loans</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+          (click)="goToTab('investment', 'investment')"
+          [class.active]="'investment' == activeItem"
+        >Investments</a>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body">
+    <router-outlet>
+      <div>
+        <div class="tabHeader">
+          <div style="width: 30%;">Name</div>
+          <div style="width: 50%;">Email</div>
+        </div>
+        <app-tab-list *ngFor="let tab of list" [tab]="tab"></app-tab-list>
+      </div>
+    </router-outlet>
+  </div>
+</div>

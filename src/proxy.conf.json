@@ -1,0 +1,8 @@
+{
+  "/service": {
+    "target": "https://codebeautify.org",
+    "secure": "true",
+    "changeOrigin": "true",
+    "logLevel": "debug"
+  }
+}
